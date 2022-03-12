@@ -1,2 +1,7 @@
 *.wav
+*.so
 .vscode
+*.reapeaks
+.DS_Store
+_*
+.*
