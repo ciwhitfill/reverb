@@ -51,7 +51,11 @@ class Delay:
     sample_rate: np.double
     delay_taps: np.double[:]
 
+<<<<<<< HEAD
     def __cinit__(self, sample_rate: np.uintc, max_delay_ms: np.double, delay_taps, interpolation: str):
+=======
+    def __init__(self, sample_rate: np.uintc, max_delay_ms: np.double, delay_taps, interpolation: str):
+>>>>>>> 7eb40c781df79f3ef5a24eb77c452e2b87b98873
         self.interpolation = interpolation
         self.sample_rate = sample_rate
         self.output = 0.0
