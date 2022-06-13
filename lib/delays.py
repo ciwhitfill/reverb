@@ -1,15 +1,7 @@
-#!python
-#cython: language_level=3
+# distutils: language = c++
 
-"""
-delays.py
-Collection of delays for algorithmic reverbs
-"""
-
-from typing import Dict
-import cython
 import numpy as np
-
+import cython
 
 @cython.cclass
 class RingBuffer:
@@ -42,47 +34,83 @@ class RingBuffer:
         for _index in range(self.length):
             self.push(0.0)
 
-    def __getitem__(self, index: int) -> np.double:
+    def __getitem__(self, index: np.uintc) -> np.double:
         if index < 0:
-            return self.buffer_view[(self.write_pointer - index) % self.length]
+            return self.buffer_view[(self.write_pointer + index) % self.length]
 
-        return self.buffer_view[(self.read_pointer + index) % self.length]
+        return self.buffer_view[(self.read_pointer - index) % self.length]
 
 
 @cython.cclass
 class Delay:
     """Circular buffer delay"""
-    stereo: bool
+    interpolation: bool
     output: np.double
     delay_length: np.uintc
-    delay_line: RingBuffer
+    delay_buffer: RingBuffer
+    sample_rate: np.double
+    delay_taps: np.double[:]
 
-    def __init__(self, sample_rate: np.uintc, delay_ms: np.float,
-                 delay_samples: np.uintc = 0):
-        self.stereo = False
+    def __init__(self, sample_rate: np.uintc, max_delay_ms: np.double, delay_taps, interpolation: str):
+        self.interpolation = interpolation
+        self.sample_rate = sample_rate
         self.output = 0.0
-        if delay_samples > 0:
-            self.delay_length = delay_samples
-        else:
-            self.delay_length = int(delay_ms * (sample_rate / 1000.0))
-
-        self.delay_line = RingBuffer(self.delay_length)
+        self.delay_taps = delay_taps
+        
+        self.delay_length = int(max_delay_ms * (sample_rate / 1000.0) + 2)
+        self.delay_buffer = RingBuffer(self.delay_length)
         self.clear()
 
     def __getattr__(self, output):
         return self.output
 
     @cython.ccall
-    def tick(self, input_):
+    def tick(self, input_: np.double):
         """Run delay for 1 sample"""
-        self.output = self.delay_line[-1]
-        self.delay_line.push(input_)
+        self.output = 0
+        for tap in self.delay_taps:
+            self.output += self.read(tap)
+        self.delay_buffer.push(input_)
 
+    @cython.ccall
+    def read(self, delay_tap: np.double) -> cython.double:
+        delay: np.double = delay_tap * (self.sample_rate / 1000.0)
+        return self.interpolate(delay)
+    
+    @cython.ccall
+    def interpolate(self, x_bar: np.double) -> cython.double:
+        """Interpolate between two points in the delay line"""
+        floor: np.uintc = int(np.floor(x_bar))
+        remainder: np.uintc = x_bar - floor
+        y1: np.double = self.delay_buffer[floor]
+        y2: np.double = self.delay_buffer[floor + 1]
+        
+        if self.interpolation == 'linear':
+            interpolate: np.double = (y2 - y1) * (remainder)
+            return y1 + interpolate
+        
+        elif self.interpolation == 'hermite':
+            y0: np.double = self.delay_buffer[floor - 1]
+            y3: np.double = self.delay_buffer[floor + 2]
+            slope0: np.double = (y2 - y0) * 0.5
+            slope1: np.double = (y3 - y1) * 0.5
+            v: np.double = y1 - y2
+            w: np.double = slope0 + v
+            a: np.double = w + v + slope1
+            b_neg: np.double = w + a
+            stage1: np.double = a * remainder - b_neg
+            stage2: np.double = stage1 * remainder + slope0
+            return stage2 * remainder + y1
+            
+        elif self.interpolation == 'none':
+           nearest_neighbor: np.uintc = int(np.round(x_bar))
+           return self.delay_buffer[nearest_neighbor]
+        
     @cython.ccall
     def clear(self):
         """Flush delay line, setting all values to 0.0"""
         for _index in range(self.delay_length + 1):
-            self.delay_line.push(0.0)
+            self.delay_buffer.push(0.0)
 
 
 @cython.cclass
@@ -92,9 +120,8 @@ class CombFilter:
     coeff: np.uintc
     output: np.double
 
-    def __init__(self, sample_rate: np.uintc, delay_ms: np.float,
-                 coeff: np.uintc):
-        self.delay = Delay(sample_rate, delay_ms)
+    def __cinit__(self, sample_rate: np.uintc, delay_ms: float, coeff: np.uintc):
+        self.delay = Delay(sample_rate, delay_ms, [delay_ms], 'none')
         self.coeff = coeff
         self.output = 0.0
 
@@ -115,7 +142,7 @@ class CombFilter:
 
 
 @cython.cclass
-class AllPassDelay(CombFilter):
+class SchroederAllPass(CombFilter):
     """All pass delay"""
     delay: Delay
     coeff: np.uintc
@@ -125,133 +152,9 @@ class AllPassDelay(CombFilter):
     def tick(self, input_: np.double):
         """Run delay for 1 sample"""
         delay_input: np.double = input_ + self.coeff * self.delay.output
-        self.output = ((-1.0 * self.coeff * delay_input) +
-                       ((1.0 - self.coeff**2) * self.delay.output))
+        self.output = (-1.0 * self.coeff * input_) + \
+            ((1.0 - (self.coeff**2)) * self.delay.output)
 
         self.delay.tick(delay_input)
-
-
-@cython.cclass
-class FeedbackLowPass():
-    """For use in delay feedback paths"""
-    delay: Delay
-    damp: np.single
-    output: np.double
-
-    def __init__(self, sample_rate: np.uintc, dampening: np.single):
-        self.delay = Delay(sample_rate, 0, delay_samples=1)
-        self.damp = dampening
-        self.output = 0.0
-
-    @cython.ccall
-    def tick(self, input_: np.double):
-        """"Run filter one step"""
-        self.output = ((self.damp * self.delay.output) +
-                       ((1.0 - self.damp) * input_))
-        self.delay.tick(self.output)
-
-    @cython.ccall
-    def clear(self):
-        """Flush delay lines, setting all values to 0.0"""
-        self.delay.clear()
-        self.output = 0.0
-
-    def __getattr__(self, output):
-        return self.output
-
-
-@cython.cclass
-class LowpassFeedbackCombFilter():
-    """Moorer comb filter with lowpass in feedback path"""
-    delay: Delay
-    lowpass: FeedbackLowPass
-    fb_gain: np.single
-    output: np.double
-
-    def __init__(self, sample_rate: np.uintc, delay_ms: np.single,
-                 coeffs: Dict):
-        self.delay = Delay(sample_rate, delay_ms)
-        self.lowpass = FeedbackLowPass(sample_rate, coeffs["dampening"])
-        self.fb_gain = coeffs["feedback_gain"]
-        self.output = 0.0
-
-    @cython.ccall
-    def tick(self, input_: np.double):
-        """Run delay for 1 sample"""
-        self.output = self.delay.output
-        delay_input: np.double = input_ + self.fb_gain * self.lowpass.output
-        self.lowpass.tick(self.output)
-        self.delay.tick(delay_input)
-
-    @cython.ccall
-    def clear(self):
-        """Flush delay lines, setting all values to 0.0"""
-        self.delay.clear()
-        self.lowpass.clear()
-        self.output = 0.0
-
-    def __getattr__(self, output):
-        return self.output
-
-
-@cython.cclass
-class LowpassFeedbackAllPass(LowpassFeedbackCombFilter):
-    """All pass delay with low pass in feedback path"""
-    delay: Delay
-    lowpass: FeedbackLowPass
-    fb_gain: np.single
-    output: np.double
-
-    @cython.ccall
-    def tick(self, input_: np.double):
-        """Run delay for 1 sample"""
-        delay_input: np.double = input_ + self.fb_gain * self.lowpass.output
-        self.output = ((-1.0 * self.fb_gain * delay_input) +
-                       (1.0 - self.fb_gain**2) * self.delay.output)
-
-        self.lowpass.tick(self.delay.output * self.fb_gain)
-        self.delay.tick(delay_input)
-
-    def __getattr__(self, output) -> np.double:
-        return self.output
-
-
-@cython.cclass
-class MultiTapDelay():
-    """Multi-tap delay"""
-    stereo: bool
-    output: np.double
-    delay_taps: np.uintc[:]
-    delay_line: RingBuffer
-    num_delay_taps: np.uintc
-    delay_length: np.uintc
-
-    def __init__(self, sample_rate: np.uintc, delays_ms: np.ndarray):
-        self.stereo = False
-        self.num_delay_taps = len(delays_ms)
-        self.delay_taps = (delays_ms * (float(sample_rate) /
-                                        1000.0)).astype(int)
-        self.delay_length = max(self.delay_taps)
-        self.delay_line = RingBuffer(self.delay_length)
-        self.num_delay_taps = len(self.delay_taps)
-        self.output = 0.0
-        self.clear()
-
-    @cython.ccall
-    def tick(self, input_: np.double):
-        """Run delay for 1 sample"""
-        self.output = 0.0
-        mult: np.double = 1 / float(self.num_delay_taps)
-        for delay in range(self.num_delay_taps):
-            self.output += self.delay_line[self.delay_taps[delay]] * mult
-
-        self.delay_line.push(input_)
-
-    def __getattr__(self, output):
-        return self.output
-
-    @cython.ccall
-    def clear(self):
-        """Flush delay line, setting all values to 0.0"""
-        for _index in range(self.delay_length + 1):
-            self.delay_line.push(0.0)
+        
+        

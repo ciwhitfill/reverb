@@ -3,6 +3,7 @@ utils.py
 Micellaneous helper functions
 """
 from scipy.io import wavfile
+from scipy import fft
 import numpy as np
 
 import IPython
@@ -14,17 +15,10 @@ def process_file(input_path, output_path, processor):
     sample_rate, input_ = wavfile.read(input_path)
     scale_factor = 2**15
 
-    if processor.stereo:
-        output = np.zeros((input_.size, 2))
-    else:
-        output = np.zeros(input_.size)
+    output = np.zeros(fft.next_fast_len(input_.size))
 
     for index, sample in enumerate(input_):
+        output[index] = processor.output * scale_factor
         processor.tick(float(sample)/(scale_factor))
-        if processor.stereo:
-            output[index][0] = processor.output[0] * scale_factor
-            output[index][1] = processor.output[1] * scale_factor
-        else:
-            output[index] = processor.output * scale_factor
 
     wavfile.write(output_path, sample_rate, output.astype(np.int16))
