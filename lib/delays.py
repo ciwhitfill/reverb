@@ -3,6 +3,7 @@
 import numpy as np
 import cython
 
+
 @cython.cclass
 class RingBuffer:
     """Circular buffer"""
@@ -51,16 +52,12 @@ class Delay:
     sample_rate: np.double
     delay_taps: np.double[:]
 
-<<<<<<< HEAD
     def __cinit__(self, sample_rate: np.uintc, max_delay_ms: np.double, delay_taps, interpolation: str):
-=======
-    def __init__(self, sample_rate: np.uintc, max_delay_ms: np.double, delay_taps, interpolation: str):
->>>>>>> 7eb40c781df79f3ef5a24eb77c452e2b87b98873
         self.interpolation = interpolation
         self.sample_rate = sample_rate
         self.output = 0.0
         self.delay_taps = delay_taps
-        
+
         self.delay_length = int(max_delay_ms * (sample_rate / 1000.0) + 2)
         self.delay_buffer = RingBuffer(self.delay_length)
         self.clear()
@@ -80,7 +77,7 @@ class Delay:
     def read(self, delay_tap: np.double) -> cython.double:
         delay: np.double = delay_tap * (self.sample_rate / 1000.0)
         return self.interpolate(delay)
-    
+
     @cython.ccall
     def interpolate(self, x_bar: np.double) -> cython.double:
         """Interpolate between two points in the delay line"""
@@ -88,11 +85,11 @@ class Delay:
         remainder: np.uintc = x_bar - floor
         y1: np.double = self.delay_buffer[floor]
         y2: np.double = self.delay_buffer[floor + 1]
-        
+
         if self.interpolation == 'linear':
             interpolate: np.double = (y2 - y1) * (remainder)
             return y1 + interpolate
-        
+
         elif self.interpolation == 'hermite':
             y0: np.double = self.delay_buffer[floor - 1]
             y3: np.double = self.delay_buffer[floor + 2]
@@ -105,11 +102,11 @@ class Delay:
             stage1: np.double = a * remainder - b_neg
             stage2: np.double = stage1 * remainder + slope0
             return stage2 * remainder + y1
-            
+
         elif self.interpolation == 'none':
-           nearest_neighbor: np.uintc = int(np.round(x_bar))
-           return self.delay_buffer[nearest_neighbor]
-        
+            nearest_neighbor: np.uintc = int(np.round(x_bar))
+            return self.delay_buffer[nearest_neighbor]
+
     @cython.ccall
     def clear(self):
         """Flush delay line, setting all values to 0.0"""
@@ -160,5 +157,3 @@ class SchroederAllPass(CombFilter):
             ((1.0 - (self.coeff**2)) * self.delay.output)
 
         self.delay.tick(delay_input)
-        
-        
