@@ -1,7 +1,9 @@
 *.wav
 *.so
+*.o
 .vscode
 *.reapeaks
 .DS_Store
 _*
 .*
+build/*
