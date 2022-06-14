@@ -1,5 +1,3 @@
-# distutils: language = c++
-
 import numpy as np
 import cython
 
@@ -10,24 +8,21 @@ class RingBuffer:
     buffer: np.double[:]
     buffer_view: np.double[:, ::1]
     length: np.uintc
-    write_pointer: np.uintc
-    read_pointer: np.uintc
+    pointer: np.uintc
 
     def __cinit__(self, length: np.uintc) -> None:
         self.buffer = np.zeros(length, dtype=np.double)
         self.buffer_view = self.buffer
         self.length = length
-        self.write_pointer = 0
-        self.read_pointer = 1
+        self.pointer = 0
 
     @cython.ccall
     @cython.boundscheck(False)
     @cython.wraparound(False)
     def push(self, input_: np.double):
         """Push sample to delay line"""
-        self.buffer_view[self.write_pointer] = input_
-        self.write_pointer = (self.write_pointer + 1) % self.length
-        self.read_pointer = (self.write_pointer + 1) % self.length
+        self.buffer_view[self.pointer] = input_
+        self.pointer = (self.pointer + 1) % self.length
 
     @cython.ccall
     def clear(self):
@@ -35,11 +30,13 @@ class RingBuffer:
         for _index in range(self.length):
             self.push(0.0)
 
+    @cython.boundscheck(False)
+    @cython.wraparound(False)
     def __getitem__(self, index: np.uintc) -> np.double:
         if index < 0:
-            return self.buffer_view[(self.write_pointer + index) % self.length]
+            return self.buffer_view[(self.pointer + index) % self.length]
 
-        return self.buffer_view[(self.read_pointer - index) % self.length]
+        return self.buffer_view[(self.pointer - index - 1) % self.length]
 
 
 @cython.cclass
