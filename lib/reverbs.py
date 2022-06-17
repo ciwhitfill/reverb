@@ -9,6 +9,7 @@ class SchroederReverb:
     Schroeder reverbator, as described in
     'Natural Sounding Artificial Reverberation', Fig. 5
     """
+
     def __init__(self, coeffs, delay_length, allpass_matrix, sample_rate):
         self.size = len(allpass_matrix)
         self.gain_1 = coeffs["gain_1"]

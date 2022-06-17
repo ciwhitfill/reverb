@@ -64,6 +64,7 @@ class Delay:
         self.delay_buffer = RingBuffer(self.delay_length)
         self.clear()
 
+
     def __getattr__(self, output):
         return self.output
 
@@ -71,9 +72,9 @@ class Delay:
     def tick(self, input_: np.double):
         """Run delay for 1 sample"""
         self.output = 0
+        self.delay_buffer.push(input_)
         for tap in self.delay_taps:
             self.output += self.read(tap)
-        self.delay_buffer.push(input_)
 
     @cython.ccall
     def read(self, delay_tap: np.double) -> cython.double:

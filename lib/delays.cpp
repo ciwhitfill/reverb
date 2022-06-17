@@ -896,7 +896,7 @@ struct __pyx_obj_6reverb_3lib_6delays_Delay {
 };
 
 
-/* "reverb/lib/delays.pyx":120
+/* "reverb/lib/delays.pyx":121
  * 
  * @cython.cclass
  * class CombFilter:             # <<<<<<<<<<<<<<
@@ -912,7 +912,7 @@ struct __pyx_obj_6reverb_3lib_6delays_CombFilter {
 };
 
 
-/* "reverb/lib/delays.pyx":148
+/* "reverb/lib/delays.pyx":149
  * 
  * @cython.cclass
  * class SchroederAllPass(CombFilter):             # <<<<<<<<<<<<<<
@@ -957,7 +957,7 @@ struct __pyx_vtabstruct_6reverb_3lib_6delays_Delay {
 static struct __pyx_vtabstruct_6reverb_3lib_6delays_Delay *__pyx_vtabptr_6reverb_3lib_6delays_Delay;
 
 
-/* "reverb/lib/delays.pyx":120
+/* "reverb/lib/delays.pyx":121
  * 
  * @cython.cclass
  * class CombFilter:             # <<<<<<<<<<<<<<
@@ -972,7 +972,7 @@ struct __pyx_vtabstruct_6reverb_3lib_6delays_CombFilter {
 static struct __pyx_vtabstruct_6reverb_3lib_6delays_CombFilter *__pyx_vtabptr_6reverb_3lib_6delays_CombFilter;
 
 
-/* "reverb/lib/delays.pyx":148
+/* "reverb/lib/delays.pyx":149
  * 
  * @cython.cclass
  * class SchroederAllPass(CombFilter):             # <<<<<<<<<<<<<<
@@ -2569,7 +2569,7 @@ static int __pyx_pf_6reverb_3lib_6delays_5Delay___cinit__(struct __pyx_obj_6reve
  *         self.delay_buffer = RingBuffer(self.delay_length)
  *         self.clear()             # <<<<<<<<<<<<<<
  * 
- *     def __getattr__(self, output):
+ * 
  */
   __pyx_t_2 = ((struct __pyx_vtabstruct_6reverb_3lib_6delays_Delay *)__pyx_v_self->__pyx_vtab)->clear(__pyx_v_self, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -2596,8 +2596,8 @@ static int __pyx_pf_6reverb_3lib_6delays_5Delay___cinit__(struct __pyx_obj_6reve
   return __pyx_r;
 }
 
-/* "reverb/lib/delays.pyx":67
- *         self.clear()
+/* "reverb/lib/delays.pyx":68
+ * 
  * 
  *     def __getattr__(self, output):             # <<<<<<<<<<<<<<
  *         return self.output
@@ -2622,7 +2622,7 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_5Delay_2__getattr__(struct __pyx_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__getattr__", 0);
 
-  /* "reverb/lib/delays.pyx":68
+  /* "reverb/lib/delays.pyx":69
  * 
  *     def __getattr__(self, output):
  *         return self.output             # <<<<<<<<<<<<<<
@@ -2634,8 +2634,8 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_5Delay_2__getattr__(struct __pyx_
   __pyx_r = __pyx_v_self->output;
   goto __pyx_L0;
 
-  /* "reverb/lib/delays.pyx":67
- *         self.clear()
+  /* "reverb/lib/delays.pyx":68
+ * 
  * 
  *     def __getattr__(self, output):             # <<<<<<<<<<<<<<
  *         return self.output
@@ -2649,7 +2649,7 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_5Delay_2__getattr__(struct __pyx_
   return __pyx_r;
 }
 
-/* "reverb/lib/delays.pyx":71
+/* "reverb/lib/delays.pyx":72
  * 
  *     @cython.ccall
  *     def tick(self, input_: np.double):             # <<<<<<<<<<<<<<
@@ -2682,7 +2682,7 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_5Delay_tick(struct __pyx_obj_6reve
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_tick); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 71, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_tick); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_6reverb_3lib_6delays_5Delay_5tick)) {
         __Pyx_XDECREF(__pyx_r);
@@ -2699,7 +2699,7 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_5Delay_tick(struct __pyx_obj_6reve
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_input_) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_input_);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 71, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 72, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __pyx_r = __pyx_t_2;
@@ -2720,12 +2720,12 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_5Delay_tick(struct __pyx_obj_6reve
     #endif
   }
 
-  /* "reverb/lib/delays.pyx":73
+  /* "reverb/lib/delays.pyx":74
  *     def tick(self, input_: np.double):
  *         """Run delay for 1 sample"""
  *         self.output = 0             # <<<<<<<<<<<<<<
+ *         self.delay_buffer.push(input_)
  *         for tap in self.delay_taps:
- *             self.output += self.read(tap)
  */
   __Pyx_INCREF(__pyx_int_0);
   __Pyx_GIVEREF(__pyx_int_0);
@@ -2733,37 +2733,48 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_5Delay_tick(struct __pyx_obj_6reve
   __Pyx_DECREF(__pyx_v_self->output);
   __pyx_v_self->output = __pyx_int_0;
 
-  /* "reverb/lib/delays.pyx":74
+  /* "reverb/lib/delays.pyx":75
  *         """Run delay for 1 sample"""
  *         self.output = 0
+ *         self.delay_buffer.push(input_)             # <<<<<<<<<<<<<<
+ *         for tap in self.delay_taps:
+ *             self.output += self.read(tap)
+ */
+  __pyx_t_1 = ((struct __pyx_vtabstruct_6reverb_3lib_6delays_RingBuffer *)__pyx_v_self->delay_buffer->__pyx_vtab)->push(__pyx_v_self->delay_buffer, __pyx_v_input_, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "reverb/lib/delays.pyx":76
+ *         self.output = 0
+ *         self.delay_buffer.push(input_)
  *         for tap in self.delay_taps:             # <<<<<<<<<<<<<<
  *             self.output += self.read(tap)
- *         self.delay_buffer.push(input_)
+ * 
  */
   if (likely(PyList_CheckExact(__pyx_v_self->delay_taps)) || PyTuple_CheckExact(__pyx_v_self->delay_taps)) {
     __pyx_t_1 = __pyx_v_self->delay_taps; __Pyx_INCREF(__pyx_t_1); __pyx_t_5 = 0;
     __pyx_t_6 = NULL;
   } else {
-    __pyx_t_5 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_self->delay_taps); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 74, __pyx_L1_error)
+    __pyx_t_5 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_self->delay_taps); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 74, __pyx_L1_error)
+    __pyx_t_6 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 76, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_6)) {
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 74, __pyx_L1_error)
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 76, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 74, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 76, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       } else {
         if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 74, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 76, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 74, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 76, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       }
@@ -2773,7 +2784,7 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_5Delay_tick(struct __pyx_obj_6reve
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 74, __pyx_L1_error)
+          else __PYX_ERR(0, 76, __pyx_L1_error)
         }
         break;
       }
@@ -2782,17 +2793,17 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_5Delay_tick(struct __pyx_obj_6reve
     __Pyx_XDECREF_SET(__pyx_v_tap, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "reverb/lib/delays.pyx":75
- *         self.output = 0
+    /* "reverb/lib/delays.pyx":77
+ *         self.delay_buffer.push(input_)
  *         for tap in self.delay_taps:
  *             self.output += self.read(tap)             # <<<<<<<<<<<<<<
- *         self.delay_buffer.push(input_)
  * 
+ *     @cython.ccall
  */
-    __pyx_t_7 = ((struct __pyx_vtabstruct_6reverb_3lib_6delays_Delay *)__pyx_v_self->__pyx_vtab)->read(__pyx_v_self, __pyx_v_tap, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 75, __pyx_L1_error)
-    __pyx_t_2 = PyFloat_FromDouble(__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 75, __pyx_L1_error)
+    __pyx_t_7 = ((struct __pyx_vtabstruct_6reverb_3lib_6delays_Delay *)__pyx_v_self->__pyx_vtab)->read(__pyx_v_self, __pyx_v_tap, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_2 = PyFloat_FromDouble(__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 77, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = PyNumber_InPlaceAdd(__pyx_v_self->output, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 75, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_InPlaceAdd(__pyx_v_self->output, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 77, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GIVEREF(__pyx_t_3);
@@ -2801,28 +2812,17 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_5Delay_tick(struct __pyx_obj_6reve
     __pyx_v_self->output = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "reverb/lib/delays.pyx":74
- *         """Run delay for 1 sample"""
+    /* "reverb/lib/delays.pyx":76
  *         self.output = 0
+ *         self.delay_buffer.push(input_)
  *         for tap in self.delay_taps:             # <<<<<<<<<<<<<<
  *             self.output += self.read(tap)
- *         self.delay_buffer.push(input_)
+ * 
  */
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "reverb/lib/delays.pyx":76
- *         for tap in self.delay_taps:
- *             self.output += self.read(tap)
- *         self.delay_buffer.push(input_)             # <<<<<<<<<<<<<<
- * 
- *     @cython.ccall
- */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_6reverb_3lib_6delays_RingBuffer *)__pyx_v_self->delay_buffer->__pyx_vtab)->push(__pyx_v_self->delay_buffer, __pyx_v_input_, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "reverb/lib/delays.pyx":71
+  /* "reverb/lib/delays.pyx":72
  * 
  *     @cython.ccall
  *     def tick(self, input_: np.double):             # <<<<<<<<<<<<<<
@@ -2870,7 +2870,7 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_5Delay_4tick(struct __pyx_obj_6re
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("tick", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6reverb_3lib_6delays_5Delay_tick(__pyx_v_self, __pyx_v_input_, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6reverb_3lib_6delays_5Delay_tick(__pyx_v_self, __pyx_v_input_, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2887,7 +2887,7 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_5Delay_4tick(struct __pyx_obj_6re
   return __pyx_r;
 }
 
-/* "reverb/lib/delays.pyx":79
+/* "reverb/lib/delays.pyx":80
  * 
  *     @cython.ccall
  *     def read(self, delay_tap: np.double) -> cython.double:             # <<<<<<<<<<<<<<
@@ -2918,7 +2918,7 @@ static double __pyx_f_6reverb_3lib_6delays_5Delay_read(struct __pyx_obj_6reverb_
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_read); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_read); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_6reverb_3lib_6delays_5Delay_7read)) {
         __Pyx_INCREF(__pyx_t_1);
@@ -2934,10 +2934,10 @@ static double __pyx_f_6reverb_3lib_6delays_5Delay_read(struct __pyx_obj_6reverb_
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_delay_tap) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_delay_tap);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 79, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 80, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 79, __pyx_L1_error)
+        __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 80, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_5;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -2956,33 +2956,33 @@ static double __pyx_f_6reverb_3lib_6delays_5Delay_read(struct __pyx_obj_6reverb_
     #endif
   }
 
-  /* "reverb/lib/delays.pyx":80
+  /* "reverb/lib/delays.pyx":81
  *     @cython.ccall
  *     def read(self, delay_tap: np.double) -> cython.double:
  *         delay: np.double = delay_tap * (self.sample_rate / 1000.0)             # <<<<<<<<<<<<<<
  *         return self.interpolate(delay)
  * 
  */
-  __pyx_t_1 = __Pyx_PyFloat_DivideObjC(__pyx_v_self->sample_rate, __pyx_float_1000_0, 1000.0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyFloat_DivideObjC(__pyx_v_self->sample_rate, __pyx_float_1000_0, 1000.0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Multiply(__pyx_v_delay_tap, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Multiply(__pyx_v_delay_tap, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_delay = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "reverb/lib/delays.pyx":81
+  /* "reverb/lib/delays.pyx":82
  *     def read(self, delay_tap: np.double) -> cython.double:
  *         delay: np.double = delay_tap * (self.sample_rate / 1000.0)
  *         return self.interpolate(delay)             # <<<<<<<<<<<<<<
  * 
  *     @cython.ccall
  */
-  __pyx_t_5 = ((struct __pyx_vtabstruct_6reverb_3lib_6delays_Delay *)__pyx_v_self->__pyx_vtab)->interpolate(__pyx_v_self, __pyx_v_delay, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_t_5 = ((struct __pyx_vtabstruct_6reverb_3lib_6delays_Delay *)__pyx_v_self->__pyx_vtab)->interpolate(__pyx_v_self, __pyx_v_delay, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L1_error)
   __pyx_r = __pyx_t_5;
   goto __pyx_L0;
 
-  /* "reverb/lib/delays.pyx":79
+  /* "reverb/lib/delays.pyx":80
  * 
  *     @cython.ccall
  *     def read(self, delay_tap: np.double) -> cython.double:             # <<<<<<<<<<<<<<
@@ -3027,8 +3027,8 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_5Delay_6read(struct __pyx_obj_6re
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("read", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6reverb_3lib_6delays_5Delay_read(__pyx_v_self, __pyx_v_delay_tap, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 79, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 79, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6reverb_3lib_6delays_5Delay_read(__pyx_v_self, __pyx_v_delay_tap, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -3045,7 +3045,7 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_5Delay_6read(struct __pyx_obj_6re
   return __pyx_r;
 }
 
-/* "reverb/lib/delays.pyx":84
+/* "reverb/lib/delays.pyx":85
  * 
  *     @cython.ccall
  *     def interpolate(self, x_bar: np.double) -> cython.double:             # <<<<<<<<<<<<<<
@@ -3092,7 +3092,7 @@ static double __pyx_f_6reverb_3lib_6delays_5Delay_interpolate(struct __pyx_obj_6
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_interpolate); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_interpolate); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 85, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_6reverb_3lib_6delays_5Delay_9interpolate)) {
         __Pyx_INCREF(__pyx_t_1);
@@ -3108,10 +3108,10 @@ static double __pyx_f_6reverb_3lib_6delays_5Delay_interpolate(struct __pyx_obj_6
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_x_bar) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_x_bar);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 84, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 85, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L1_error)
+        __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_5;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -3130,16 +3130,16 @@ static double __pyx_f_6reverb_3lib_6delays_5Delay_interpolate(struct __pyx_obj_6
     #endif
   }
 
-  /* "reverb/lib/delays.pyx":86
+  /* "reverb/lib/delays.pyx":87
  *     def interpolate(self, x_bar: np.double) -> cython.double:
  *         """Interpolate between two points in the delay line"""
  *         floor: np.uintc = int(np.floor(x_bar))             # <<<<<<<<<<<<<<
  *         remainder: np.uintc = x_bar - floor
  *         y1: np.double = self.delay_buffer[floor]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 86, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 87, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_floor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 86, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_floor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 87, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -3154,94 +3154,94 @@ static double __pyx_f_6reverb_3lib_6delays_5Delay_interpolate(struct __pyx_obj_6
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_v_x_bar) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_x_bar);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 86, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 87, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 86, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 87, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_floor = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "reverb/lib/delays.pyx":87
+  /* "reverb/lib/delays.pyx":88
  *         """Interpolate between two points in the delay line"""
  *         floor: np.uintc = int(np.floor(x_bar))
  *         remainder: np.uintc = x_bar - floor             # <<<<<<<<<<<<<<
  *         y1: np.double = self.delay_buffer[floor]
  *         y2: np.double = self.delay_buffer[floor + 1]
  */
-  __pyx_t_3 = PyNumber_Subtract(__pyx_v_x_bar, __pyx_v_floor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 87, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Subtract(__pyx_v_x_bar, __pyx_v_floor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_remainder = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "reverb/lib/delays.pyx":88
+  /* "reverb/lib/delays.pyx":89
  *         floor: np.uintc = int(np.floor(x_bar))
  *         remainder: np.uintc = x_bar - floor
  *         y1: np.double = self.delay_buffer[floor]             # <<<<<<<<<<<<<<
  *         y2: np.double = self.delay_buffer[floor + 1]
  * 
  */
-  __pyx_t_3 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_self->delay_buffer), __pyx_v_floor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 88, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_self->delay_buffer), __pyx_v_floor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 89, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_y1 = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "reverb/lib/delays.pyx":89
+  /* "reverb/lib/delays.pyx":90
  *         remainder: np.uintc = x_bar - floor
  *         y1: np.double = self.delay_buffer[floor]
  *         y2: np.double = self.delay_buffer[floor + 1]             # <<<<<<<<<<<<<<
  * 
  *         if self.interpolation == 'linear':
  */
-  __pyx_t_3 = __Pyx_PyInt_AddObjC(__pyx_v_floor, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 89, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_AddObjC(__pyx_v_floor, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 90, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_self->delay_buffer), __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 89, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_self->delay_buffer), __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 90, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_y2 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "reverb/lib/delays.pyx":91
+  /* "reverb/lib/delays.pyx":92
  *         y2: np.double = self.delay_buffer[floor + 1]
  * 
  *         if self.interpolation == 'linear':             # <<<<<<<<<<<<<<
  *             interpolate: np.double = (y2 - y1) * (remainder)
  *             return y1 + interpolate
  */
-  __pyx_t_6 = (__Pyx_PyString_Equals(__pyx_v_self->interpolation, __pyx_n_s_linear, Py_EQ)); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_6 = (__Pyx_PyString_Equals(__pyx_v_self->interpolation, __pyx_n_s_linear, Py_EQ)); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 92, __pyx_L1_error)
   if (__pyx_t_6) {
 
-    /* "reverb/lib/delays.pyx":92
+    /* "reverb/lib/delays.pyx":93
  * 
  *         if self.interpolation == 'linear':
  *             interpolate: np.double = (y2 - y1) * (remainder)             # <<<<<<<<<<<<<<
  *             return y1 + interpolate
  * 
  */
-    __pyx_t_1 = PyNumber_Subtract(__pyx_v_y2, __pyx_v_y1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Subtract(__pyx_v_y2, __pyx_v_y1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = PyNumber_Multiply(__pyx_t_1, __pyx_v_remainder); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 92, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Multiply(__pyx_t_1, __pyx_v_remainder); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 93, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_interpolate = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "reverb/lib/delays.pyx":93
+    /* "reverb/lib/delays.pyx":94
  *         if self.interpolation == 'linear':
  *             interpolate: np.double = (y2 - y1) * (remainder)
  *             return y1 + interpolate             # <<<<<<<<<<<<<<
  * 
  *         elif self.interpolation == 'hermite':
  */
-    __pyx_t_3 = PyNumber_Add(__pyx_v_y1, __pyx_v_interpolate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 93, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Add(__pyx_v_y1, __pyx_v_interpolate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 94, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 93, __pyx_L1_error)
+    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 94, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_r = __pyx_t_5;
     goto __pyx_L0;
 
-    /* "reverb/lib/delays.pyx":91
+    /* "reverb/lib/delays.pyx":92
  *         y2: np.double = self.delay_buffer[floor + 1]
  * 
  *         if self.interpolation == 'linear':             # <<<<<<<<<<<<<<
@@ -3250,175 +3250,175 @@ static double __pyx_f_6reverb_3lib_6delays_5Delay_interpolate(struct __pyx_obj_6
  */
   }
 
-  /* "reverb/lib/delays.pyx":95
+  /* "reverb/lib/delays.pyx":96
  *             return y1 + interpolate
  * 
  *         elif self.interpolation == 'hermite':             # <<<<<<<<<<<<<<
  *             y0: np.double = self.delay_buffer[floor - 1]
  *             y3: np.double = self.delay_buffer[floor + 2]
  */
-  __pyx_t_6 = (__Pyx_PyString_Equals(__pyx_v_self->interpolation, __pyx_n_s_hermite, Py_EQ)); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_t_6 = (__Pyx_PyString_Equals(__pyx_v_self->interpolation, __pyx_n_s_hermite, Py_EQ)); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 96, __pyx_L1_error)
   if (__pyx_t_6) {
 
-    /* "reverb/lib/delays.pyx":96
+    /* "reverb/lib/delays.pyx":97
  * 
  *         elif self.interpolation == 'hermite':
  *             y0: np.double = self.delay_buffer[floor - 1]             # <<<<<<<<<<<<<<
  *             y3: np.double = self.delay_buffer[floor + 2]
  *             slope0: np.double = (y2 - y0) * 0.5
  */
-    __pyx_t_3 = __Pyx_PyInt_SubtractObjC(__pyx_v_floor, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 96, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_SubtractObjC(__pyx_v_floor, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 97, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_1 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_self->delay_buffer), __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 96, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_self->delay_buffer), __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 97, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_y0 = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "reverb/lib/delays.pyx":97
+    /* "reverb/lib/delays.pyx":98
  *         elif self.interpolation == 'hermite':
  *             y0: np.double = self.delay_buffer[floor - 1]
  *             y3: np.double = self.delay_buffer[floor + 2]             # <<<<<<<<<<<<<<
  *             slope0: np.double = (y2 - y0) * 0.5
  *             slope1: np.double = (y3 - y1) * 0.5
  */
-    __pyx_t_1 = __Pyx_PyInt_AddObjC(__pyx_v_floor, __pyx_int_2, 2, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 97, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_AddObjC(__pyx_v_floor, __pyx_int_2, 2, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 98, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_self->delay_buffer), __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 97, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_self->delay_buffer), __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 98, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_y3 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "reverb/lib/delays.pyx":98
+    /* "reverb/lib/delays.pyx":99
  *             y0: np.double = self.delay_buffer[floor - 1]
  *             y3: np.double = self.delay_buffer[floor + 2]
  *             slope0: np.double = (y2 - y0) * 0.5             # <<<<<<<<<<<<<<
  *             slope1: np.double = (y3 - y1) * 0.5
  *             v: np.double = y1 - y2
  */
-    __pyx_t_3 = PyNumber_Subtract(__pyx_v_y2, __pyx_v_y0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 98, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Subtract(__pyx_v_y2, __pyx_v_y0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 99, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_1 = PyNumber_Multiply(__pyx_t_3, __pyx_float_0_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 98, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Multiply(__pyx_t_3, __pyx_float_0_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 99, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_slope0 = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "reverb/lib/delays.pyx":99
+    /* "reverb/lib/delays.pyx":100
  *             y3: np.double = self.delay_buffer[floor + 2]
  *             slope0: np.double = (y2 - y0) * 0.5
  *             slope1: np.double = (y3 - y1) * 0.5             # <<<<<<<<<<<<<<
  *             v: np.double = y1 - y2
  *             w: np.double = slope0 + v
  */
-    __pyx_t_1 = PyNumber_Subtract(__pyx_v_y3, __pyx_v_y1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 99, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Subtract(__pyx_v_y3, __pyx_v_y1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 100, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = PyNumber_Multiply(__pyx_t_1, __pyx_float_0_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 99, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Multiply(__pyx_t_1, __pyx_float_0_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 100, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_slope1 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "reverb/lib/delays.pyx":100
+    /* "reverb/lib/delays.pyx":101
  *             slope0: np.double = (y2 - y0) * 0.5
  *             slope1: np.double = (y3 - y1) * 0.5
  *             v: np.double = y1 - y2             # <<<<<<<<<<<<<<
  *             w: np.double = slope0 + v
  *             a: np.double = w + v + slope1
  */
-    __pyx_t_3 = PyNumber_Subtract(__pyx_v_y1, __pyx_v_y2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 100, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Subtract(__pyx_v_y1, __pyx_v_y2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 101, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_v_v = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "reverb/lib/delays.pyx":101
+    /* "reverb/lib/delays.pyx":102
  *             slope1: np.double = (y3 - y1) * 0.5
  *             v: np.double = y1 - y2
  *             w: np.double = slope0 + v             # <<<<<<<<<<<<<<
  *             a: np.double = w + v + slope1
  *             b_neg: np.double = w + a
  */
-    __pyx_t_3 = PyNumber_Add(__pyx_v_slope0, __pyx_v_v); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 101, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Add(__pyx_v_slope0, __pyx_v_v); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_v_w = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "reverb/lib/delays.pyx":102
+    /* "reverb/lib/delays.pyx":103
  *             v: np.double = y1 - y2
  *             w: np.double = slope0 + v
  *             a: np.double = w + v + slope1             # <<<<<<<<<<<<<<
  *             b_neg: np.double = w + a
  *             stage1: np.double = a * remainder - b_neg
  */
-    __pyx_t_3 = PyNumber_Add(__pyx_v_w, __pyx_v_v); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Add(__pyx_v_w, __pyx_v_v); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 103, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_1 = PyNumber_Add(__pyx_t_3, __pyx_v_slope1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Add(__pyx_t_3, __pyx_v_slope1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 103, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_a = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "reverb/lib/delays.pyx":103
+    /* "reverb/lib/delays.pyx":104
  *             w: np.double = slope0 + v
  *             a: np.double = w + v + slope1
  *             b_neg: np.double = w + a             # <<<<<<<<<<<<<<
  *             stage1: np.double = a * remainder - b_neg
  *             stage2: np.double = stage1 * remainder + slope0
  */
-    __pyx_t_1 = PyNumber_Add(__pyx_v_w, __pyx_v_a); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 103, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Add(__pyx_v_w, __pyx_v_a); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 104, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_v_b_neg = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "reverb/lib/delays.pyx":104
+    /* "reverb/lib/delays.pyx":105
  *             a: np.double = w + v + slope1
  *             b_neg: np.double = w + a
  *             stage1: np.double = a * remainder - b_neg             # <<<<<<<<<<<<<<
  *             stage2: np.double = stage1 * remainder + slope0
  *             return stage2 * remainder + y1
  */
-    __pyx_t_1 = PyNumber_Multiply(__pyx_v_a, __pyx_v_remainder); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 104, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Multiply(__pyx_v_a, __pyx_v_remainder); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 105, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = PyNumber_Subtract(__pyx_t_1, __pyx_v_b_neg); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 104, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Subtract(__pyx_t_1, __pyx_v_b_neg); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 105, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_stage1 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "reverb/lib/delays.pyx":105
+    /* "reverb/lib/delays.pyx":106
  *             b_neg: np.double = w + a
  *             stage1: np.double = a * remainder - b_neg
  *             stage2: np.double = stage1 * remainder + slope0             # <<<<<<<<<<<<<<
  *             return stage2 * remainder + y1
  * 
  */
-    __pyx_t_3 = PyNumber_Multiply(__pyx_v_stage1, __pyx_v_remainder); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 105, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Multiply(__pyx_v_stage1, __pyx_v_remainder); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 106, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_1 = PyNumber_Add(__pyx_t_3, __pyx_v_slope0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 105, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Add(__pyx_t_3, __pyx_v_slope0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_stage2 = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "reverb/lib/delays.pyx":106
+    /* "reverb/lib/delays.pyx":107
  *             stage1: np.double = a * remainder - b_neg
  *             stage2: np.double = stage1 * remainder + slope0
  *             return stage2 * remainder + y1             # <<<<<<<<<<<<<<
  * 
  *         elif self.interpolation == 'none':
  */
-    __pyx_t_1 = PyNumber_Multiply(__pyx_v_stage2, __pyx_v_remainder); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Multiply(__pyx_v_stage2, __pyx_v_remainder); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 107, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_v_y1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 106, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_v_y1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 107, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 106, __pyx_L1_error)
+    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 107, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_r = __pyx_t_5;
     goto __pyx_L0;
 
-    /* "reverb/lib/delays.pyx":95
+    /* "reverb/lib/delays.pyx":96
  *             return y1 + interpolate
  * 
  *         elif self.interpolation == 'hermite':             # <<<<<<<<<<<<<<
@@ -3427,26 +3427,26 @@ static double __pyx_f_6reverb_3lib_6delays_5Delay_interpolate(struct __pyx_obj_6
  */
   }
 
-  /* "reverb/lib/delays.pyx":108
+  /* "reverb/lib/delays.pyx":109
  *             return stage2 * remainder + y1
  * 
  *         elif self.interpolation == 'none':             # <<<<<<<<<<<<<<
  *             nearest_neighbor: np.uintc = int(np.round(x_bar))
  *             return self.delay_buffer[nearest_neighbor]
  */
-  __pyx_t_6 = (__Pyx_PyString_Equals(__pyx_v_self->interpolation, __pyx_n_s_none, Py_EQ)); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_6 = (__Pyx_PyString_Equals(__pyx_v_self->interpolation, __pyx_n_s_none, Py_EQ)); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 109, __pyx_L1_error)
   if (__pyx_t_6) {
 
-    /* "reverb/lib/delays.pyx":109
+    /* "reverb/lib/delays.pyx":110
  * 
  *         elif self.interpolation == 'none':
  *             nearest_neighbor: np.uintc = int(np.round(x_bar))             # <<<<<<<<<<<<<<
  *             return self.delay_buffer[nearest_neighbor]
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 109, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 110, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_round); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 109, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_round); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 110, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -3461,30 +3461,30 @@ static double __pyx_f_6reverb_3lib_6delays_5Delay_interpolate(struct __pyx_obj_6
     }
     __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_v_x_bar) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_x_bar);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 109, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 110, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 109, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 110, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_nearest_neighbor = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "reverb/lib/delays.pyx":110
+    /* "reverb/lib/delays.pyx":111
  *         elif self.interpolation == 'none':
  *             nearest_neighbor: np.uintc = int(np.round(x_bar))
  *             return self.delay_buffer[nearest_neighbor]             # <<<<<<<<<<<<<<
  * 
  *     @cython.ccall
  */
-    __pyx_t_2 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_self->delay_buffer), __pyx_v_nearest_neighbor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 110, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_self->delay_buffer), __pyx_v_nearest_neighbor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 111, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 110, __pyx_L1_error)
+    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 111, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_r = __pyx_t_5;
     goto __pyx_L0;
 
-    /* "reverb/lib/delays.pyx":108
+    /* "reverb/lib/delays.pyx":109
  *             return stage2 * remainder + y1
  * 
  *         elif self.interpolation == 'none':             # <<<<<<<<<<<<<<
@@ -3493,7 +3493,7 @@ static double __pyx_f_6reverb_3lib_6delays_5Delay_interpolate(struct __pyx_obj_6
  */
   }
 
-  /* "reverb/lib/delays.pyx":84
+  /* "reverb/lib/delays.pyx":85
  * 
  *     @cython.ccall
  *     def interpolate(self, x_bar: np.double) -> cython.double:             # <<<<<<<<<<<<<<
@@ -3556,8 +3556,8 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_5Delay_8interpolate(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("interpolate", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6reverb_3lib_6delays_5Delay_interpolate(__pyx_v_self, __pyx_v_x_bar, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6reverb_3lib_6delays_5Delay_interpolate(__pyx_v_self, __pyx_v_x_bar, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 85, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -3574,7 +3574,7 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_5Delay_8interpolate(struct __pyx_
   return __pyx_r;
 }
 
-/* "reverb/lib/delays.pyx":113
+/* "reverb/lib/delays.pyx":114
  * 
  *     @cython.ccall
  *     def clear(self):             # <<<<<<<<<<<<<<
@@ -3606,7 +3606,7 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_5Delay_clear(struct __pyx_obj_6rev
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_clear); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_clear); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_6reverb_3lib_6delays_5Delay_11clear)) {
         __Pyx_XDECREF(__pyx_r);
@@ -3623,7 +3623,7 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_5Delay_clear(struct __pyx_obj_6rev
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 114, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __pyx_r = __pyx_t_2;
@@ -3644,25 +3644,25 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_5Delay_clear(struct __pyx_obj_6rev
     #endif
   }
 
-  /* "reverb/lib/delays.pyx":115
+  /* "reverb/lib/delays.pyx":116
  *     def clear(self):
  *         """Flush delay line, setting all values to 0.0"""
  *         for _index in range(self.delay_length + 1):             # <<<<<<<<<<<<<<
  *             self.delay_buffer.push(0.0)
  * 
  */
-  __pyx_t_1 = __Pyx_PyInt_AddObjC(__pyx_v_self->delay_length, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_AddObjC(__pyx_v_self->delay_length, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_range, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_range, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
     __pyx_t_1 = __pyx_t_2; __Pyx_INCREF(__pyx_t_1); __pyx_t_5 = 0;
     __pyx_t_6 = NULL;
   } else {
-    __pyx_t_5 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 115, __pyx_L1_error)
+    __pyx_t_5 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 115, __pyx_L1_error)
+    __pyx_t_6 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 116, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   for (;;) {
@@ -3670,17 +3670,17 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_5Delay_clear(struct __pyx_obj_6rev
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 115, __pyx_L1_error)
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 116, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 115, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 116, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       } else {
         if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 115, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 116, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 115, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 116, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       }
@@ -3690,7 +3690,7 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_5Delay_clear(struct __pyx_obj_6rev
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 115, __pyx_L1_error)
+          else __PYX_ERR(0, 116, __pyx_L1_error)
         }
         break;
       }
@@ -3699,18 +3699,18 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_5Delay_clear(struct __pyx_obj_6rev
     __Pyx_XDECREF_SET(__pyx_v__index, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "reverb/lib/delays.pyx":116
+    /* "reverb/lib/delays.pyx":117
  *         """Flush delay line, setting all values to 0.0"""
  *         for _index in range(self.delay_length + 1):
  *             self.delay_buffer.push(0.0)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-    __pyx_t_2 = ((struct __pyx_vtabstruct_6reverb_3lib_6delays_RingBuffer *)__pyx_v_self->delay_buffer->__pyx_vtab)->push(__pyx_v_self->delay_buffer, __pyx_float_0_0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 116, __pyx_L1_error)
+    __pyx_t_2 = ((struct __pyx_vtabstruct_6reverb_3lib_6delays_RingBuffer *)__pyx_v_self->delay_buffer->__pyx_vtab)->push(__pyx_v_self->delay_buffer, __pyx_float_0_0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 117, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "reverb/lib/delays.pyx":115
+    /* "reverb/lib/delays.pyx":116
  *     def clear(self):
  *         """Flush delay line, setting all values to 0.0"""
  *         for _index in range(self.delay_length + 1):             # <<<<<<<<<<<<<<
@@ -3720,7 +3720,7 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_5Delay_clear(struct __pyx_obj_6rev
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "reverb/lib/delays.pyx":113
+  /* "reverb/lib/delays.pyx":114
  * 
  *     @cython.ccall
  *     def clear(self):             # <<<<<<<<<<<<<<
@@ -3768,7 +3768,7 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_5Delay_10clear(struct __pyx_obj_6
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("clear", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6reverb_3lib_6delays_5Delay_clear(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6reverb_3lib_6delays_5Delay_clear(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3898,7 +3898,7 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_5Delay_14__setstate_cython__(CYTH
   return __pyx_r;
 }
 
-/* "reverb/lib/delays.pyx":126
+/* "reverb/lib/delays.pyx":127
  *     output: np.double
  * 
  *     def __cinit__(self, sample_rate: np.uintc, delay_ms: float, coeff: np.uintc):             # <<<<<<<<<<<<<<
@@ -3943,17 +3943,17 @@ static int __pyx_pw_6reverb_3lib_6delays_10CombFilter_1__cinit__(PyObject *__pyx
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_delay_ms)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 3, 3, 1); __PYX_ERR(0, 126, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 3, 3, 1); __PYX_ERR(0, 127, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_coeff)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 3, 3, 2); __PYX_ERR(0, 126, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 3, 3, 2); __PYX_ERR(0, 127, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(0, 126, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(0, 127, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -3963,12 +3963,12 @@ static int __pyx_pw_6reverb_3lib_6delays_10CombFilter_1__cinit__(PyObject *__pyx
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
     __pyx_v_sample_rate = values[0];
-    __pyx_v_delay_ms = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_delay_ms == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 126, __pyx_L3_error)
+    __pyx_v_delay_ms = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_delay_ms == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 127, __pyx_L3_error)
     __pyx_v_coeff = values[2];
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 126, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 127, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("reverb.lib.delays.CombFilter.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3992,23 +3992,23 @@ static int __pyx_pf_6reverb_3lib_6delays_10CombFilter___cinit__(struct __pyx_obj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "reverb/lib/delays.pyx":127
+  /* "reverb/lib/delays.pyx":128
  * 
  *     def __cinit__(self, sample_rate: np.uintc, delay_ms: float, coeff: np.uintc):
  *         self.delay = Delay(sample_rate, delay_ms, [delay_ms], 'none')             # <<<<<<<<<<<<<<
  *         self.coeff = coeff
  *         self.output = 0.0
  */
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_delay_ms); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_delay_ms); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_delay_ms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_delay_ms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyList_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_3 = PyList_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_2);
   PyList_SET_ITEM(__pyx_t_3, 0, __pyx_t_2);
   __pyx_t_2 = 0;
-  __pyx_t_2 = PyTuple_New(4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_v_sample_rate);
   __Pyx_GIVEREF(__pyx_v_sample_rate);
@@ -4022,7 +4022,7 @@ static int __pyx_pf_6reverb_3lib_6delays_10CombFilter___cinit__(struct __pyx_obj
   PyTuple_SET_ITEM(__pyx_t_2, 3, __pyx_n_s_none);
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_6reverb_3lib_6delays_Delay), __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_6reverb_3lib_6delays_Delay), __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_GIVEREF(__pyx_t_3);
@@ -4031,7 +4031,7 @@ static int __pyx_pf_6reverb_3lib_6delays_10CombFilter___cinit__(struct __pyx_obj
   __pyx_v_self->delay = ((struct __pyx_obj_6reverb_3lib_6delays_Delay *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "reverb/lib/delays.pyx":128
+  /* "reverb/lib/delays.pyx":129
  *     def __cinit__(self, sample_rate: np.uintc, delay_ms: float, coeff: np.uintc):
  *         self.delay = Delay(sample_rate, delay_ms, [delay_ms], 'none')
  *         self.coeff = coeff             # <<<<<<<<<<<<<<
@@ -4044,7 +4044,7 @@ static int __pyx_pf_6reverb_3lib_6delays_10CombFilter___cinit__(struct __pyx_obj
   __Pyx_DECREF(__pyx_v_self->coeff);
   __pyx_v_self->coeff = __pyx_v_coeff;
 
-  /* "reverb/lib/delays.pyx":129
+  /* "reverb/lib/delays.pyx":130
  *         self.delay = Delay(sample_rate, delay_ms, [delay_ms], 'none')
  *         self.coeff = coeff
  *         self.output = 0.0             # <<<<<<<<<<<<<<
@@ -4057,7 +4057,7 @@ static int __pyx_pf_6reverb_3lib_6delays_10CombFilter___cinit__(struct __pyx_obj
   __Pyx_DECREF(__pyx_v_self->output);
   __pyx_v_self->output = __pyx_float_0_0;
 
-  /* "reverb/lib/delays.pyx":126
+  /* "reverb/lib/delays.pyx":127
  *     output: np.double
  * 
  *     def __cinit__(self, sample_rate: np.uintc, delay_ms: float, coeff: np.uintc):             # <<<<<<<<<<<<<<
@@ -4079,7 +4079,7 @@ static int __pyx_pf_6reverb_3lib_6delays_10CombFilter___cinit__(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "reverb/lib/delays.pyx":132
+/* "reverb/lib/delays.pyx":133
  * 
  *     @cython.ccall
  *     def tick(self, input_: np.double):             # <<<<<<<<<<<<<<
@@ -4109,7 +4109,7 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_10CombFilter_tick(struct __pyx_obj
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_tick); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 132, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_tick); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 133, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_6reverb_3lib_6delays_10CombFilter_3tick)) {
         __Pyx_XDECREF(__pyx_r);
@@ -4126,7 +4126,7 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_10CombFilter_tick(struct __pyx_obj
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_input_) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_input_);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 132, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 133, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __pyx_r = __pyx_t_2;
@@ -4147,22 +4147,22 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_10CombFilter_tick(struct __pyx_obj
     #endif
   }
 
-  /* "reverb/lib/delays.pyx":134
+  /* "reverb/lib/delays.pyx":135
  *     def tick(self, input_: np.double):
  *         """Run delay for 1 sample"""
  *         delay_input: np.double = input_ + self.coeff * self.delay.output             # <<<<<<<<<<<<<<
  *         self.output = self.delay.output
  *         self.delay.tick(delay_input)
  */
-  __pyx_t_1 = PyNumber_Multiply(__pyx_v_self->coeff, __pyx_v_self->delay->output); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 134, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_v_self->coeff, __pyx_v_self->delay->output); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Add(__pyx_v_input_, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 134, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_v_input_, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_delay_input = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "reverb/lib/delays.pyx":135
+  /* "reverb/lib/delays.pyx":136
  *         """Run delay for 1 sample"""
  *         delay_input: np.double = input_ + self.coeff * self.delay.output
  *         self.output = self.delay.output             # <<<<<<<<<<<<<<
@@ -4177,18 +4177,18 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_10CombFilter_tick(struct __pyx_obj
   __pyx_v_self->output = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "reverb/lib/delays.pyx":136
+  /* "reverb/lib/delays.pyx":137
  *         delay_input: np.double = input_ + self.coeff * self.delay.output
  *         self.output = self.delay.output
  *         self.delay.tick(delay_input)             # <<<<<<<<<<<<<<
  * 
  *     @cython.ccall
  */
-  __pyx_t_2 = ((struct __pyx_vtabstruct_6reverb_3lib_6delays_Delay *)__pyx_v_self->delay->__pyx_vtab)->tick(__pyx_v_self->delay, __pyx_v_delay_input, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_6reverb_3lib_6delays_Delay *)__pyx_v_self->delay->__pyx_vtab)->tick(__pyx_v_self->delay, __pyx_v_delay_input, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "reverb/lib/delays.pyx":132
+  /* "reverb/lib/delays.pyx":133
  * 
  *     @cython.ccall
  *     def tick(self, input_: np.double):             # <<<<<<<<<<<<<<
@@ -4236,7 +4236,7 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_10CombFilter_2tick(struct __pyx_o
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("tick", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6reverb_3lib_6delays_10CombFilter_tick(__pyx_v_self, __pyx_v_input_, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 132, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6reverb_3lib_6delays_10CombFilter_tick(__pyx_v_self, __pyx_v_input_, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 133, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4253,7 +4253,7 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_10CombFilter_2tick(struct __pyx_o
   return __pyx_r;
 }
 
-/* "reverb/lib/delays.pyx":139
+/* "reverb/lib/delays.pyx":140
  * 
  *     @cython.ccall
  *     def clear(self):             # <<<<<<<<<<<<<<
@@ -4282,7 +4282,7 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_10CombFilter_clear(struct __pyx_ob
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_clear); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_clear); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_6reverb_3lib_6delays_10CombFilter_5clear)) {
         __Pyx_XDECREF(__pyx_r);
@@ -4299,7 +4299,7 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_10CombFilter_clear(struct __pyx_ob
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 139, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 140, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __pyx_r = __pyx_t_2;
@@ -4320,18 +4320,18 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_10CombFilter_clear(struct __pyx_ob
     #endif
   }
 
-  /* "reverb/lib/delays.pyx":141
+  /* "reverb/lib/delays.pyx":142
  *     def clear(self):
  *         """Flush delay line, setting all values to 0.0"""
  *         self.delay.clear()             # <<<<<<<<<<<<<<
  * 
  *     def __getattr__(self, output):
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_6reverb_3lib_6delays_Delay *)__pyx_v_self->delay->__pyx_vtab)->clear(__pyx_v_self->delay, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_6reverb_3lib_6delays_Delay *)__pyx_v_self->delay->__pyx_vtab)->clear(__pyx_v_self->delay, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 142, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "reverb/lib/delays.pyx":139
+  /* "reverb/lib/delays.pyx":140
  * 
  *     @cython.ccall
  *     def clear(self):             # <<<<<<<<<<<<<<
@@ -4378,7 +4378,7 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_10CombFilter_4clear(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("clear", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6reverb_3lib_6delays_10CombFilter_clear(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6reverb_3lib_6delays_10CombFilter_clear(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4395,7 +4395,7 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_10CombFilter_4clear(struct __pyx_
   return __pyx_r;
 }
 
-/* "reverb/lib/delays.pyx":143
+/* "reverb/lib/delays.pyx":144
  *         self.delay.clear()
  * 
  *     def __getattr__(self, output):             # <<<<<<<<<<<<<<
@@ -4421,7 +4421,7 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_10CombFilter_6__getattr__(struct 
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__getattr__", 0);
 
-  /* "reverb/lib/delays.pyx":144
+  /* "reverb/lib/delays.pyx":145
  * 
  *     def __getattr__(self, output):
  *         return self.output             # <<<<<<<<<<<<<<
@@ -4433,7 +4433,7 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_10CombFilter_6__getattr__(struct 
   __pyx_r = __pyx_v_self->output;
   goto __pyx_L0;
 
-  /* "reverb/lib/delays.pyx":143
+  /* "reverb/lib/delays.pyx":144
  *         self.delay.clear()
  * 
  *     def __getattr__(self, output):             # <<<<<<<<<<<<<<
@@ -4561,7 +4561,7 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_10CombFilter_10__setstate_cython_
   return __pyx_r;
 }
 
-/* "reverb/lib/delays.pyx":155
+/* "reverb/lib/delays.pyx":156
  * 
  *     @cython.ccall
  *     def tick(self, input_: np.double):             # <<<<<<<<<<<<<<
@@ -4591,7 +4591,7 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_16SchroederAllPass_tick(struct __p
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_tick); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 155, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_tick); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_6reverb_3lib_6delays_16SchroederAllPass_1tick)) {
         __Pyx_XDECREF(__pyx_r);
@@ -4608,7 +4608,7 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_16SchroederAllPass_tick(struct __p
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_input_) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_input_);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 155, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 156, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __pyx_r = __pyx_t_2;
@@ -4629,58 +4629,58 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_16SchroederAllPass_tick(struct __p
     #endif
   }
 
-  /* "reverb/lib/delays.pyx":157
+  /* "reverb/lib/delays.pyx":158
  *     def tick(self, input_: np.double):
  *         """Run delay for 1 sample"""
  *         delay_input: np.double = input_ + self.coeff * self.delay.output             # <<<<<<<<<<<<<<
  *         self.output = (-1.0 * self.coeff * input_) + \
  *             ((1.0 - (self.coeff**2)) * self.delay.output)
  */
-  __pyx_t_1 = PyNumber_Multiply(__pyx_v_self->__pyx_base.coeff, __pyx_v_self->__pyx_base.delay->output); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_v_self->__pyx_base.coeff, __pyx_v_self->__pyx_base.delay->output); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Add(__pyx_v_input_, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_v_input_, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_delay_input = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "reverb/lib/delays.pyx":158
+  /* "reverb/lib/delays.pyx":159
  *         """Run delay for 1 sample"""
  *         delay_input: np.double = input_ + self.coeff * self.delay.output
  *         self.output = (-1.0 * self.coeff * input_) + \             # <<<<<<<<<<<<<<
  *             ((1.0 - (self.coeff**2)) * self.delay.output)
  * 
  */
-  __pyx_t_2 = PyNumber_Multiply(__pyx_float_neg_1_0, __pyx_v_self->__pyx_base.coeff); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Multiply(__pyx_float_neg_1_0, __pyx_v_self->__pyx_base.coeff); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyNumber_Multiply(__pyx_t_2, __pyx_v_input_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_t_2, __pyx_v_input_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "reverb/lib/delays.pyx":159
+  /* "reverb/lib/delays.pyx":160
  *         delay_input: np.double = input_ + self.coeff * self.delay.output
  *         self.output = (-1.0 * self.coeff * input_) + \
  *             ((1.0 - (self.coeff**2)) * self.delay.output)             # <<<<<<<<<<<<<<
  * 
  *         self.delay.tick(delay_input)
  */
-  __pyx_t_2 = PyNumber_Power(__pyx_v_self->__pyx_base.coeff, __pyx_int_2, Py_None); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 159, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Power(__pyx_v_self->__pyx_base.coeff, __pyx_int_2, Py_None); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyFloat_SubtractCObj(__pyx_float_1_0, __pyx_t_2, 1.0, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 159, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyFloat_SubtractCObj(__pyx_float_1_0, __pyx_t_2, 1.0, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Multiply(__pyx_t_3, __pyx_v_self->__pyx_base.delay->output); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 159, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Multiply(__pyx_t_3, __pyx_v_self->__pyx_base.delay->output); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "reverb/lib/delays.pyx":158
+  /* "reverb/lib/delays.pyx":159
  *         """Run delay for 1 sample"""
  *         delay_input: np.double = input_ + self.coeff * self.delay.output
  *         self.output = (-1.0 * self.coeff * input_) + \             # <<<<<<<<<<<<<<
  *             ((1.0 - (self.coeff**2)) * self.delay.output)
  * 
  */
-  __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -4690,16 +4690,16 @@ static PyObject *__pyx_f_6reverb_3lib_6delays_16SchroederAllPass_tick(struct __p
   __pyx_v_self->__pyx_base.output = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "reverb/lib/delays.pyx":161
+  /* "reverb/lib/delays.pyx":162
  *             ((1.0 - (self.coeff**2)) * self.delay.output)
  * 
  *         self.delay.tick(delay_input)             # <<<<<<<<<<<<<<
  */
-  __pyx_t_3 = ((struct __pyx_vtabstruct_6reverb_3lib_6delays_Delay *)__pyx_v_self->__pyx_base.delay->__pyx_vtab)->tick(__pyx_v_self->__pyx_base.delay, __pyx_v_delay_input, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 161, __pyx_L1_error)
+  __pyx_t_3 = ((struct __pyx_vtabstruct_6reverb_3lib_6delays_Delay *)__pyx_v_self->__pyx_base.delay->__pyx_vtab)->tick(__pyx_v_self->__pyx_base.delay, __pyx_v_delay_input, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "reverb/lib/delays.pyx":155
+  /* "reverb/lib/delays.pyx":156
  * 
  *     @cython.ccall
  *     def tick(self, input_: np.double):             # <<<<<<<<<<<<<<
@@ -4747,7 +4747,7 @@ static PyObject *__pyx_pf_6reverb_3lib_6delays_16SchroederAllPass_tick(struct __
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("tick", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6reverb_3lib_6delays_16SchroederAllPass_tick(__pyx_v_self, __pyx_v_input_, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 155, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6reverb_3lib_6delays_16SchroederAllPass_tick(__pyx_v_self, __pyx_v_input_, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5746,28 +5746,28 @@ static int __Pyx_modinit_type_init_code(void) {
   __pyx_vtabptr_6reverb_3lib_6delays_CombFilter = &__pyx_vtable_6reverb_3lib_6delays_CombFilter;
   __pyx_vtable_6reverb_3lib_6delays_CombFilter.tick = (PyObject *(*)(struct __pyx_obj_6reverb_3lib_6delays_CombFilter *, PyObject *, int __pyx_skip_dispatch))__pyx_f_6reverb_3lib_6delays_10CombFilter_tick;
   __pyx_vtable_6reverb_3lib_6delays_CombFilter.clear = (PyObject *(*)(struct __pyx_obj_6reverb_3lib_6delays_CombFilter *, int __pyx_skip_dispatch))__pyx_f_6reverb_3lib_6delays_10CombFilter_clear;
-  if (PyType_Ready(&__pyx_type_6reverb_3lib_6delays_CombFilter) < 0) __PYX_ERR(0, 120, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_6reverb_3lib_6delays_CombFilter) < 0) __PYX_ERR(0, 121, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_6reverb_3lib_6delays_CombFilter.tp_print = 0;
   #endif
-  if (__Pyx_SetVtable(__pyx_type_6reverb_3lib_6delays_CombFilter.tp_dict, __pyx_vtabptr_6reverb_3lib_6delays_CombFilter) < 0) __PYX_ERR(0, 120, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_CombFilter, (PyObject *)&__pyx_type_6reverb_3lib_6delays_CombFilter) < 0) __PYX_ERR(0, 120, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_6reverb_3lib_6delays_CombFilter) < 0) __PYX_ERR(0, 120, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_6reverb_3lib_6delays_CombFilter.tp_dict, __pyx_vtabptr_6reverb_3lib_6delays_CombFilter) < 0) __PYX_ERR(0, 121, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_CombFilter, (PyObject *)&__pyx_type_6reverb_3lib_6delays_CombFilter) < 0) __PYX_ERR(0, 121, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_6reverb_3lib_6delays_CombFilter) < 0) __PYX_ERR(0, 121, __pyx_L1_error)
   __pyx_ptype_6reverb_3lib_6delays_CombFilter = &__pyx_type_6reverb_3lib_6delays_CombFilter;
   __pyx_vtabptr_6reverb_3lib_6delays_SchroederAllPass = &__pyx_vtable_6reverb_3lib_6delays_SchroederAllPass;
   __pyx_vtable_6reverb_3lib_6delays_SchroederAllPass.__pyx_base = *__pyx_vtabptr_6reverb_3lib_6delays_CombFilter;
   __pyx_vtable_6reverb_3lib_6delays_SchroederAllPass.__pyx_base.tick = (PyObject *(*)(struct __pyx_obj_6reverb_3lib_6delays_CombFilter *, PyObject *, int __pyx_skip_dispatch))__pyx_f_6reverb_3lib_6delays_16SchroederAllPass_tick;
   __pyx_type_6reverb_3lib_6delays_SchroederAllPass.tp_base = __pyx_ptype_6reverb_3lib_6delays_CombFilter;
-  if (PyType_Ready(&__pyx_type_6reverb_3lib_6delays_SchroederAllPass) < 0) __PYX_ERR(0, 148, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_6reverb_3lib_6delays_SchroederAllPass) < 0) __PYX_ERR(0, 149, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_6reverb_3lib_6delays_SchroederAllPass.tp_print = 0;
   #endif
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_6reverb_3lib_6delays_SchroederAllPass.tp_dictoffset && __pyx_type_6reverb_3lib_6delays_SchroederAllPass.tp_getattro == PyObject_GenericGetAttr)) {
     __pyx_type_6reverb_3lib_6delays_SchroederAllPass.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
-  if (__Pyx_SetVtable(__pyx_type_6reverb_3lib_6delays_SchroederAllPass.tp_dict, __pyx_vtabptr_6reverb_3lib_6delays_SchroederAllPass) < 0) __PYX_ERR(0, 148, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_SchroederAllPass, (PyObject *)&__pyx_type_6reverb_3lib_6delays_SchroederAllPass) < 0) __PYX_ERR(0, 148, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_6reverb_3lib_6delays_SchroederAllPass) < 0) __PYX_ERR(0, 148, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_6reverb_3lib_6delays_SchroederAllPass.tp_dict, __pyx_vtabptr_6reverb_3lib_6delays_SchroederAllPass) < 0) __PYX_ERR(0, 149, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_SchroederAllPass, (PyObject *)&__pyx_type_6reverb_3lib_6delays_SchroederAllPass) < 0) __PYX_ERR(0, 149, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_6reverb_3lib_6delays_SchroederAllPass) < 0) __PYX_ERR(0, 149, __pyx_L1_error)
   __pyx_ptype_6reverb_3lib_6delays_SchroederAllPass = &__pyx_type_6reverb_3lib_6delays_SchroederAllPass;
   __Pyx_RefNannyFinishContext();
   return 0;

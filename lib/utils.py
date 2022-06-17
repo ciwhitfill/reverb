@@ -18,7 +18,7 @@ def process_file(input_path, output_path, processor):
     output = np.zeros(fft.next_fast_len(input_.size))
 
     for index, sample in enumerate(input_):
-        output[index] = processor.output * scale_factor
         processor.tick(float(sample)/(scale_factor))
+        output[index] = processor.output * scale_factor
 
     wavfile.write(output_path, sample_rate, output.astype(np.int16))
