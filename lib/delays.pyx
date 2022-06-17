@@ -40,6 +40,9 @@ class RingBuffer:
 
         return self.buffer_view[(self.pointer - index - 1) % self.length]
 
+    def __getattr__(self, length):
+        return self.length
+
 
 @cython.cclass
 class Delay:

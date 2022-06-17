@@ -4,6 +4,6 @@
 .vscode
 *.reapeaks
 .DS_Store
-_*
 .*
 build/*
+__pycache__
